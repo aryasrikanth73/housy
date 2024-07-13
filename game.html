@@ -14,8 +14,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            overflow-y: hidden;
-            overflow-x: hidden; 
+            overflow: hidden; 
         }
         .container {
             text-align: center;
@@ -54,6 +53,7 @@
         }
         .btn-custom:hover {
             background-color: #0056b3;
+            color: white;
         }
     </style>
 </head>
@@ -81,7 +81,7 @@
             </tbody>
         </table>
     </div>
-    <button class="btn btn-custom mt-3" onclick="generateRandomNumber()">Generate</button>
+    <button class="btn btn-custom mt-1" onclick="generateRandomNumber()">Generate</button>
 </div>
 
 <script>
@@ -116,6 +116,10 @@
         speakNumber(randomNumber);
     }
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
