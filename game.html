@@ -13,18 +13,22 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            margin: 0;
+            overflow-y: hidden;
+            overflow-x: hidden; 
         }
         .container {
             text-align: center;
+            width: 100%;
+            max-width: 90%;
         }
         .large-number {
             font-size: 3em;
             font-weight: bold;
             color: #007bff;
-            margin-bottom: 20px;
+            margin-top: -25px;
         }
         table {
-            width: 70%;
             margin: auto;
             border-collapse: collapse;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -57,24 +61,26 @@
 
 <div class="container">
     <div class="large-number" id="large-number">-</div>
-    <table id="number-table" class="table table-bordered">
-        <tbody>
-            <!-- Generating table rows and columns -->
-            <script>
-                let tableHTML = '';
-                let number = 1;
-                for (let row = 0; row < 10; row++) {
-                    tableHTML += '<tr>';
-                    for (let col = 0; col < 10; col++) {
-                        tableHTML += '<td id="cell-' + number + '">' + number + '</td>';
-                        number++;
+    <div class="table-responsive">
+        <table id="number-table" class="table table-bordered">
+            <tbody>
+                <!-- Generating table rows and columns -->
+                <script>
+                    let tableHTML = '';
+                    let number = 1;
+                    for (let row = 0; row < 10; row++) {
+                        tableHTML += '<tr>';
+                        for (let col = 0; col < 10; col++) {
+                            tableHTML += '<td id="cell-' + number + '">' + number + '</td>';
+                            number++;
+                        }
+                        tableHTML += '</tr>';
                     }
-                    tableHTML += '</tr>';
-                }
-                document.write(tableHTML);
-            </script>
-        </tbody>
-    </table>
+                    document.write(tableHTML);
+                </script>
+            </tbody>
+        </table>
+    </div>
     <button class="btn btn-custom mt-3" onclick="generateRandomNumber()">Generate</button>
 </div>
 
